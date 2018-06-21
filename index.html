@@ -1,17 +1,16 @@
+<script>
 
-<?php
-/**
- * Created by PhpStorm.
- * User: Azathoth
- * Date: 29. 3. 2016
- * Time: 14:54
- */
-$addresses = [
-	'http://www.google.com',
-	'http://www.facebook.com',
-	'http://www.youtube.com'
-];
-$size = count($addresses);
-$randomIndex = rand(0, $size - 1);
-$randomUrl = $addresses[$randomIndex];
-header('Location: ' . $randomUrl, true, 303);
+    var randNum = Math.floor(Math.random() * 500);
+    var randURLs = [
+        "http://url0",
+        "http://url1",
+        "http://url1"
+    ];
+
+    if (randNum == 0) {
+
+        var randURL = Math.floor(Math.random() * randURLs.length);
+
+        window.open(randURLs[randURL]);
+    }
+</script>
