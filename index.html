@@ -1,32 +1,19 @@
-<head>
-<title>Page Randomizer</title>
-<SCRIPT LANGUAGE="JavaScript">
-<!-- Begin
-var howMany = 3; // max number of items listed below
-var page = new Array(howMany+1);
+<script type="text/javascript">
 
-page[0]="http://www.example.com/page1.html";
-page[1]="http://www.example.com/page2.html";
-page[2]="http://www.example.com/page3.html";
+var urls = new Array();
+urls[0] = "http://learninginhand.com";
+urls[1] = "http://learninginhand.com/about";
+urls[2] = "http://learninginhand.com/contact";
+urls[4] = "http://learninginhand.com/services";
+urls[5] = "http://learninginhand.com/videos";
+urls[6] = "http://learninginhand.com/infographics";
+urls[7] = "http://learninginhand.com/resources";
+urls[8] = "http://learninginhand.com/stickaround";
+urls[9] = "http://learninginhand.com/posts";
+urls[10] = "http://learninginhand.com/pet";
 
-function rndnumber(){
-var randscript = -1;
-while (randscript < 0 ¦¦ randscript > howMany ¦¦ isNaN(randscript)){
-randscript = parseInt(Math.random()*(howMany+1));
-}
-return randscript;
-}
-quo = rndnumber();
-quox = page[quo];
-window.location=(quox);
-// End -->
-</SCRIPT>
-</HEAD>
+var random = Math.floor(Math.random()*urls.length);
 
-<p><center>
-If script doesn't work, return to:<br>
-<a href="http://www.example.com">example.com</a>
-</center><p>
+window.location = urls[random];
 
-</body>
-</html>
+</script>
