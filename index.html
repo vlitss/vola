@@ -1,14 +1,32 @@
-<html>
-	<head>
-	<title> Index </title>
-		<style type="text/css">
-		</style>
-	</head>
-	<body>
-		<?php 
-			$urls = array("www.site1.com", "www.site2.com", "www.site3.com","www.site4.com"); 
-				$url = $urls[array_rand($urls)]; 
-			header("Location: http://$url"); 
-		?>
-	</body>
+<head>
+<title>Page Randomizer</title>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+var howMany = 3; // max number of items listed below
+var page = new Array(howMany+1);
+
+page[0]="http://www.example.com/page1.html";
+page[1]="http://www.example.com/page2.html";
+page[2]="http://www.example.com/page3.html";
+
+function rndnumber(){
+var randscript = -1;
+while (randscript < 0 ¦¦ randscript > howMany ¦¦ isNaN(randscript)){
+randscript = parseInt(Math.random()*(howMany+1));
+}
+return randscript;
+}
+quo = rndnumber();
+quox = page[quo];
+window.location=(quox);
+// End -->
+</SCRIPT>
+</HEAD>
+
+<p><center>
+If script doesn't work, return to:<br>
+<a href="http://www.example.com">example.com</a>
+</center><p>
+
+</body>
 </html>
